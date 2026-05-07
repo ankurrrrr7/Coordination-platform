@@ -49,6 +49,10 @@ const helpRequestSchema = new mongoose.Schema(
         longitude: Number
       },
       timestamp: Date
+    },
+    image: {
+      type: String,
+      default: null
     }
   },
   {

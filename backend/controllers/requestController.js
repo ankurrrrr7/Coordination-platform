@@ -4,7 +4,7 @@ const User = require('../models/User');
 // Create a new help request
 const createRequest = async (req, res) => {
   try {
-    const { title, type, description, location } = req.body;
+    const { title, type, description, location, image } = req.body;
 
     // Validate input
     if (!title || !type || !description || !location) {
@@ -19,6 +19,7 @@ const createRequest = async (req, res) => {
       type,
       description,
       location,
+      image: image || null,
       createdBy: req.user.id
     });
 

@@ -38,6 +38,7 @@ interface HelpRequest {
     };
     timestamp?: string;
   };
+  image?: string | null;
   createdAt: string;
   updatedAt: string;
 }
@@ -115,13 +116,15 @@ export const requestAPI = {
     title: string,
     type: string,
     description: string,
-    location: { text: string; coordinates?: { latitude: number; longitude: number } }
+    location: { text: string; coordinates?: { latitude: number; longitude: number } },
+    image?: string | null
   ) => {
     return apiCall<HelpRequest>('/requests', 'POST', {
       title,
       type,
       description,
       location,
+      image: image || null,
     });
   },
 
