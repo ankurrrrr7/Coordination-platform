@@ -79,7 +79,6 @@ export default function Login({ onNavigate }: LoginProps) {
               Sign up here
             </button>
           </p>
-          <p className="text-gray-600">Make sure MongoDB and backend server are running on port 5000</p>
         </div>
       </div>
     </div>
